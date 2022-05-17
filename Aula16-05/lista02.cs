@@ -19,9 +19,23 @@ class Program {
 
 		int m = (i * 2);
 		int n = (k * 3);
-		int s = (i + k / 2);
+		int s = ((m + n) / 5);
 			
 		Console.WriteLine($"Media parcial = {s}");
+		Console.WriteLine("-----------------------");
+
+		Console.WriteLine("Digite a base e a altura do retângulo:");
+		double b = double.Parse(Console.ReadLine());
+		double h = double.Parse(Console.ReadLine());
+
+		double area = (b * h);
+		double perimetro = ((b * 2) + (h * 2));
+		double raiz = (b * b) + (h * h);
+		double diagonal = Math.Sqrt(raiz);
+
+		Console.WriteLine($"Área = {area:0.00}");
+		Console.WriteLine($"Perímetro = {perimetro:0.00}");
+		Console.WriteLine($"Diametro = {diagonal:0.00}");
 
 	}
 }
