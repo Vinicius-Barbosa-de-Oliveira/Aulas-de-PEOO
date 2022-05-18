@@ -2,7 +2,9 @@ using System;
 class Program {
 	public static void Main() {
 		
+		Console.WriteLine("Digite a primeira nota");
 		double x = double.Parse(Console.ReadLine());
+		Console.WriteLine("Digite a segunda nota");
     double y = double.Parse(Console.ReadLine());
 
 		double a = (x * 3.5);
