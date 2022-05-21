@@ -14,7 +14,7 @@ class Program{
 			}
 			if (c2 == mamifero) {
 				if (c3 == onivoro) Console.WriteLine("homem");
-				if (c3 == herbivoro) Console.WriteLine("vaca")
+				if (c3 == herbivoro) Console.WriteLine("vaca");
 			}
 		}
 		if (c2 == invertebrado) {
