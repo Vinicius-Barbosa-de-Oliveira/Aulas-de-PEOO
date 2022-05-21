@@ -8,7 +8,7 @@ class Program{
 		string c3 = Console.ReadLine();
 
 		if (c1 == vertebrado) {
-			if (c2 == ave){
+			if (c2 == ave) {
 				if (c3 == carnivoro) Console.WriteLine("aguia");
 				if (c3 == onivoro) Console.WriteLine("Pomba");
 			}
