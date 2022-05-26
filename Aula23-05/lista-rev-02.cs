@@ -5,7 +5,9 @@ class Program {
 		Console.WriteLine("Digite os valores");
 		int a1 = int.Parse(Console.ReadLine());
 		int a2 = int.Parse(Console.ReadLine());
-		
+
+		Console.WriteLine("numero maior ou igual");
+			
 		if (a1 > a2) Console.WriteLine(a1);
 		if (a2 > a1) Console.WriteLine(a2);
 		if (a1 == a2) Console.WriteLine("sao numeros iguais");
@@ -31,13 +33,22 @@ class Program {
 
 		Console.WriteLine("-------------------------------");
 
-		/*Console.WriteLine("Numeros da soma")
-		int m1 = int.Parse(Console.ReadLine());
-		int m2 = int.Parse(Console.ReadLine());
-		int m3 = int.Parse(Console.ReadLine());
-		int m4 = int.Parse(Console.ReadLine());
+		Console.WriteLine("Numeros da soma");
+		int n1 = int.Parse(Console.ReadLine());
+		int n2 = int.Parse(Console.ReadLine());
+		int n3 = int.Parse(Console.ReadLine());
+		int n4 = int.Parse(Console.ReadLine());
+		
+		Console.WriteLine("Resultados");
+		if ((n1 + n2) % 2 == 0) Console.WriteLine(n1 + n2);
+		if ((n1 + n3) % 2 == 0) Console.WriteLine(n1 + n3);
+		if ((n1 + n4) % 2 == 0) Console.WriteLine(n1 + n4);
+		if ((n2 + n3) % 2 == 0) Console.WriteLine(n2 + n3);
+		if ((n2 + n4) % 2 == 0) Console.WriteLine(n2 + n4);
+		if ((n3 + n4) % 2 == 0) Console.WriteLine(n3 + n4);
 
-		if () ;*/
+	
+			
 		
 		Console.WriteLine("-------------------------------");
 		Console.WriteLine("-------------------------------");
@@ -68,16 +79,16 @@ class Program {
 		int v3 = int.Parse(Console.ReadLine());
 
 		if (v1 > v2 && v2 > v3 && v1 > v2 && v2 < v3){
-			Console.WriteLine($"Soma = {v1 + v2}");
-			if (v1 < v2 && v2 > v3 && v1 > v2 && v2 < v3){
-				Console.WriteLine($"Soma = {v2 + v1}");
-				if (v1 < v2 && v2 > v3 && v1 > v2 && v2 > v3){
-				Console.WriteLine($"Soma = {v2 + v3}");
-					if (v1 < v2 && v2 < v3 && v1 < v2 && v2 < v3){
+			Console.WriteLine($"Soma = {v1 + v2}");}
+			 else if (v1 < v2 && v2 > v3 && v1 > v2 && v2 < v3){
+				Console.WriteLine($"Soma = {v2 + v1}");}
+				else if (v1 < v2 && v2 > v3 && v1 > v2 && v2 > v3){
+				Console.WriteLine($"Soma = {v2 + v3}");}
+					else if (v1 < v2 && v2 < v3 && v1 < v2 && v2 < v3){
 					Console.WriteLine($"Soma = {v3 + v1}");
 					}
-				}
-			}
-		}
+				
+			
+		
 	}
 }
