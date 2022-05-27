@@ -7,7 +7,7 @@ class Program {
 		int n3 = int.Parse(Console.ReadLine());
 		int n4 = int.Parse(Console.ReadLine());
 		
-	/*	Console.WriteLine("Resultados 01");
+	/*	Console.WriteLine("Resultados 01- semi fracasso");
 		if (n1 % 2 != 0 && n2 % 2 != 0) Console.WriteLine("soma dos impares = " + (n1 + n2));
 		if (n1 % 2 != 0 && n3 % 2 != 0) Console.WriteLine("soma dos impares = " + (n1 + n3));
 		if (n1 % 2 != 0 && n4 % 2 != 0) Console.WriteLine("soma dos impares = " + (n1 + n4));
@@ -28,14 +28,14 @@ class Program {
 		if ((n1 + n2 + n4) % 2 == 0) Console.WriteLine(n1 + n2 + n4);
 		if ((n1 + n2 + n3) % 2 == 0) Console.WriteLine(n1 + n2 + n3);
 		
-		Console.WriteLine("Resultados 03");
+		Console.WriteLine("Resultados 03- semi fracasso");
 		if ((n1 + n2) % 2 == 0) Console.WriteLine("soma dos pares = " + (n1 + n2));
 		if ((n1 + n3) % 2 == 0) Console.WriteLine("soma dos pares = " + (n1 + n3));
 		if ((n1 + n4) % 2 == 0) Console.WriteLine("soma dos pares = " + (n1 + n4));
 		if ((n2 + n3) % 2 == 0) Console.WriteLine("soma dos pares = " + (n2 + n3));
 		if ((n2 + n4) % 2 == 0) Console.WriteLine("soma dos pares = " + (n2 + n4));
 		if ((n3 + n4) % 2 == 0) Console.WriteLine("soma dos pares = " + (n3 + n4));*/
-		Console.WriteLine("Resultados 04");
+		Console.WriteLine("Resultados 04 - sucesso");
 		int s1 = 0;
 		int s2 = 0;
 		int s3 = 0;
