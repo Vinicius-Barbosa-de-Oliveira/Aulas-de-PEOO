@@ -1,19 +1,24 @@
 using System;
 
 class Program {
-	public static string Iniciais(string nome) {
-		string x;
-		string[] v = x.Split();
+	public static string Iniciais(string nome, string y) {
 
-		public int IndexOf(v, 1);
+		string y = "";
 
-		return x;
+		string[] x = nome.ToLower().Split();
+		
+		foreach (string k in x) {
+
+			if (k != "")
+				y = k.Substring(0, 1).ToUpper();		
+		}
+		return y;
 		
 	}
 	public static void Main (string[] args){
-		string x = Console.ReadLine();
+		string nome = Console.ReadLine();
 
-		Console.WriteLine()
+		Console.WriteLine(Iniciais(y));
 		
 	}
 }
