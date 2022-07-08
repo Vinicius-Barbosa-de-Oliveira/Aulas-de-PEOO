@@ -6,7 +6,7 @@ class Program {
 		int a = 10;
 		Console.WriteLine("ordem decrescente");
 		do {
-			Console.WriteLine(a);
+			Console.Write(a);
 			a--;
 		}	while (a >= 1);
 	}

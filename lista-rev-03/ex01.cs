@@ -5,7 +5,7 @@ class Program {
 		int a = 1;
 		Console.WriteLine("ordem crescente");
 		while (a <= 10) {
-			Console.WriteLine(a);
+			Console.Write(a);
 			a++;
 		}	
 	}
