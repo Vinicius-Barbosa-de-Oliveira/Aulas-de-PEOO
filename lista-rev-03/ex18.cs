@@ -4,14 +4,22 @@ class Program {
 	public static void Main (string[] args) {
 
 		Console.WriteLine("digite os 4 valores separados por virgula");
-		string[] x = Console.ReadLine().Split(",");
+		string[] v = Console.ReadLine().Split(",");
+		int soma = 0;
 
-		int a1 = int.Parse(x[0]);
-		int a2 = int.Parse(x[1]);
-		int a3 = int.Parse(x[2]);
-		int a4 = int.Parse(x[3]);
-		int a5 = int.Parse(x[4]);
-		
-		Console.WriteLine(a1 + a2 + a3 + a4 + a5);
+		foreach (string x in v) {
+			switch (x) {
+				case "1": soma += 1; break;
+				case "2": soma += 2; break;
+				case "3": soma += 3; break;
+				case "4": soma += 4; break;
+				case "5": soma += 5; break;
+				case "6": soma += 6; break;
+				case "7": soma += 7; break;
+				case "8": soma += 8; break;
+				case "9": soma += 9; break;	
+			}
+		}
+		Console.WriteLine($"Soma = {soma}");
 	}
 }

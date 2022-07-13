@@ -3,18 +3,17 @@ using System;
 class Program {
 	public static void Main (string[] args) {
 
-		Console.WriteLine("Digite a Frase:");
-		string v = Console .ReadLine();
+		Console.WriteLine("Digite sua Frase:");
 
-		int s2 = 0;
-		int s1 = v.IndexOf(' ');
+		string x = Console.ReadLine();
 
+		int s1 = x.IndexOf(' ');
+
+		//int s2 = s1 - 1;
 		while (s1 != -1){
-			s2 += 1;
-			v = v.Substring(s1 + 1);
+			Console.Write(s1);
+			x = x.Substring(s1 + 1);
+			s1 = x.IndexOf(' ');
 		}
-		Console.WriteLine(s2);
-		s2 = 0;
-		s1 = v.IndexOf(' ');
 	}
 }
