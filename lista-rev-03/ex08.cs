@@ -4,7 +4,7 @@ class Program {
 	public static void Main() {
 
 		Console.WriteLine("Coloque a frase:");
-		string x = Console.ReadLine();
+		string x = Console.ReadLine() + " ";
 
 		int s1;
 		int s2;
