@@ -12,7 +12,7 @@ class Program {
 	}
 	public static double Frete(double massa, double distancia){
 
-		double v = massa / distancia;
+		double v = distancia * massa;
 		double k = v * 0.1;
 		return k;
 	}
