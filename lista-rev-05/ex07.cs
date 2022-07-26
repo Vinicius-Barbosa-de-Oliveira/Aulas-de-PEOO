@@ -10,8 +10,8 @@ class Program {
 
 		AntecessorSucessor(y,out i,out p);
 
-		Console.WriteLine(y);
 		Console.WriteLine(i);
+		Console.WriteLine(y);
 		Console.WriteLine(p);
 	}
 	public static void AntecessorSucessor(int x, out int antecessor, out int sucessor) {
