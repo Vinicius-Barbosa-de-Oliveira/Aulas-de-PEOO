@@ -33,20 +33,16 @@ class program {
 
 		if (d1.Media() >= 0 && d1.Media() <= 100) {
 			if (d1.Media() >= 60){
+				Console.WriteLine($"vc foi aprovado!");
 				Console.WriteLine($"Sua Media Parcial da diciplina de  {d1.nome} é: {d1.Media()}");
 				Console.WriteLine($"Sua Media Ponderada da diciplina de {d1.nome} é: {d1.MediaPonderada():f2}");
 			}
 			else {
-				if (d1.nf == 0) {
-					Console.WriteLine("Sua nota final é: {d1.nf}");
+				if (d1.mediafinal() < 60) {
+					Console.WriteLine("você foi reprovado!");
 				}
 				else {
-					if (d1.MediaFinal() >= 60) {
-						Console.WriteLine($"vc foi aprovado!");
-					}
-					else {
-						Console.WriteLine("você foi reprovado!");
-					}
+					Console.WriteLine($"vc foi aprovado!");			
 				}
 			}
 		}
@@ -64,6 +60,12 @@ class Diciplina {
 	public double nota4;
 	public double nf;
 
+	public double notafinal () {
+
+		nf = 100 - (nota1 + nota2 + nota3 + nota4);
+	  return nf;
+
+	}
 	public double Media () {
 
 		double media = (nota1 + nota2 + nota3 + nota4) / 4;
@@ -77,7 +79,7 @@ class Diciplina {
 		
 	}
 	public double MediaFinal () {
-		double mediafinal = 100 - (nota1 + nota2 + nota3 + nota4 +nf);
+		double mediafinal =;
 		return mediafinal;
 	}
 	
