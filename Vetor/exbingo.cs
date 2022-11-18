@@ -32,7 +32,7 @@ class Program {
 			Console.WriteLine("Game Over");
 		
 	}
-	class Bingo {
+	class Bingo 
 		private int numBolas;
 		private int[] numeros;
 		private int k;
