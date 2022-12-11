@@ -3,7 +3,14 @@ using System;
 class Program {
 	public static void Main () {
 
+		Jogador j1 = new Jogador(richarllyson, 09, 9);
+		Jogador j2 = new Jogador(Neymar, 10, 20);
 		
+		lista.Inserir(j1);
+		lista.Inserir(j2);
+
+		foreach(Jogador m in lista.Listar())
+			Console.WriteLine(m);
 	}
 }
 
@@ -26,12 +33,17 @@ class Time () {
 		k++;
 	}
 
+	public Jogador[] Listar() {
+		Jogador[] time = new Jogador[k];
+		Array.Copy(jogadores, time, k);
+		return time;
+	}
 	public string Artilheiro () {
 		
 	}
 
 	public override string ToString () {
-		return $"{nome}, {Estado}, {}";
+		return $"{nome}, {Estado}, {artilheiro}";
 	}
 }
 
