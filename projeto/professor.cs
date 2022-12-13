@@ -60,12 +60,12 @@ class Time {
 		return;
 	  }
 
-	jogador  aux  =js[0];
-	for( int i =1; i<k ;i++);
-  if( js[i].GetGols() > aux.GetGols() )
+		jogador  aux  =js[0];
+		for( int i =1; i<k ;i++);
+  	if( js[i].GetGols() > aux.GetGols() )
     aux= js[i];
-	MensssageBox.Show(aux.ToString())
-	}*/
+		MensssageBox.Show(aux.ToString())
+		}*/
 
 	public override string ToString() {
 		return $"{nome} - {estado}";
