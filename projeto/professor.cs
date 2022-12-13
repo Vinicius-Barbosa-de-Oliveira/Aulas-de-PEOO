@@ -15,14 +15,14 @@ class Program {
     Jogador j1 = new Jogador("Neymar", "10", 10);
     Jogador j2 = new Jogador("Richarlison", "09", 10);
     Jogador j3 = new Jogador("Vini. JR", "18", 10);
-    Time lista = new Time("Infoweb", "PEOO");
+    Time time = new Time("Infoweb", "PEOO");
 		
-    lista.Inserir(j1);
-    lista.Inserir(j2);
-    lista.Inserir(j3);
-		lista.Inserir(j4);
+    time.Inserir(j1);
+    time.Inserir(j2);
+    time.Inserir(j3);
+		time.Inserir(j4);
 		
-    foreach(Jogador m in lista.Listar())    
+    foreach(Jogador m in time.Listar())    
       Console.WriteLine(m);
   }
 }
@@ -54,13 +54,17 @@ class Time {
 		
   }
 
-	/*public string Artilheiro (){
-		foreach (Jogador n in vetor){
-			if (Gols > jogos){
-				jogos = gols;
-				art = Nome;
-			}
-		}
+	/*public Jogador Artilheiro () {
+		if (k==0) { 
+  	MessageBox.Show("nenhum jogador foi inserido ");
+		return;
+	  }
+
+	jogador  aux  =js[0];
+	for( int i =1; i<k ;i++);
+  if( js[i].GetGols() > aux.GetGols() )
+    aux= js[i];
+	MensssageBox.Show(aux.ToString())
 	}*/
 
 	public override string ToString() {
