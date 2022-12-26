@@ -31,27 +31,22 @@ class Time {
   private string nome;
 	private string estado;
   private int k = 0;
-	/*private int jogos = 0;
-	private string art = "";*/
   private Jogador[] jogadores = new Jogador[1];
   public Time(string n, string e) {
     nome = n;
 		estado = e;
   }
-  public void Inserir(Jogador m) {
+  public void Inserir(Jogador j) {
     if (k == jogadores.Length) 
       Array.Resize(ref jogadores, jogadores.Length * 2);
-    jogadores[k] = m;
+    jogadores[k] = j;
     k++;
   }
   public Jogador[] Listar() {
     Jogador[] vetor = new Jogador[k];
     Array.Copy(jogadores, vetor, k);
 
-		Console.WriteLine($"Nome do Time: {nome} - Estado: {estado}");
-		Console.WriteLine();
 		return vetor;
-		
   }
 
 	/*public Jogador Artilheiro () {
