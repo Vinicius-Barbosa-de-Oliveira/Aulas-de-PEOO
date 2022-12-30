@@ -83,7 +83,7 @@ static class NAluno {
 	public static void Salvar() {
 		XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
     StreamWriter s = new StreamWriter("./alunos.xml", false);
-    xml.Serialize(s, alunos);
+    xml.Serialize(s, Alunos);
     s.Close();
 	}
 	public static void Matricula(Aluno a, Turma t) {
