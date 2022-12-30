@@ -5,19 +5,19 @@ using System.IO;
 
 class Program {
 	public static void Main() {
-
+		Console.WriteLine("---------------------------------------------");
 		Console.WriteLine("1-Inserir, 2-Listar, 3-Salvar, 4-Abrir, 0-Fim");
 		int op = int.Parse(Console.ReadLine());
 		while (op != 0) {
 			switch(op){
 			case 1:
-				Console.WriteLine("Informe o ID: ");
+				Console.Write("Informe o ID: ");
 				int id = int.Parse(Console.ReadLine());
-				Console.WriteLine("Informe o Curso: ");
+				Console.Write("Informe o Curso: ");
 				string curso = Console.ReadLine();
-				Console.WriteLine("Informe a Descrição da Turma: ");
+				Console.Write("Informe a Descrição da Turma: ");
 			 	string descricao = Console.ReadLine();
-				Console.WriteLine("Informe o Ano Letivo: ");
+				Console.Write("Informe o Ano Letivo: ");
 				int anoletivo = int.Parse(Console.ReadLine());
 			
 				Turma t = new Turma {
@@ -36,14 +36,15 @@ class Program {
 					NTurma.Salvar();
 				break;
 			case 4:
-				NTurma.Abrir();
+					NTurma.Abrir();
 				break;
 			}
+			Console.WriteLine("---------------------------------------------");
 			Console.WriteLine("1-Inserir, 2-Listar, 3-Salvar, 4-Abrir, 0-Fim");
 			op = int.Parse(Console.ReadLine());
 		}
 
-		//Turma t = new Turma {
+		/*Turma t = new Turma {
 			//Id = 1, Curso = "infoWeb",
 			//Descricao = "2º ano", AnoLetivo = 2022 };
 
@@ -55,17 +56,18 @@ class Program {
 		// x.Inserir(t);
 		
 		//foreach (Turma x in NTurma.Listar())
-			//Console.WriteLine(x);
+			//Console.WriteLine(x);*/
 		
 	}
 }
 
 
-class Turma {
+public class Turma {
 	public int Id { get; set; }
 	public string Curso { get; set; }
 	public string Descricao { get; set; }
 	public int AnoLetivo { get; set; }
+	
 	public override string ToString() {
 		return $"{Id} - {Curso} - {Descricao} - {AnoLetivo}";
 	}
@@ -89,15 +91,15 @@ static class NTurma {
 		
 	}
 	public static void Abrir() {
-		XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
-		StreamReader f = new StreamReadr("./turmas.xml");
-		turmas = (List<Turma>) xml.Deserialize(f);
-		f.Close();
+    XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
+    StreamReader f = new StreamReader("./turma.xml");
+    turmas = (List<Turma>) xml.Deserialize(f);
+    f.Close();
 	}
-	public static void Salva() {
+	public static void Salvar() {
 		XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
-		StreamWriter f = new StreamWriter("./turmas.xml", false);
-		xml.Serialize(f, turmas);
-		f.Close();
+    StreamWriter f = new StreamWriter("./turma.xml", false);
+    xml.Serialize(f, turmas);
+    f.Close();
 	}
 }
