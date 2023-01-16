@@ -79,22 +79,50 @@ static class NTurma {
 	private static List<Turma> turmas = new List<Turma>();
 
 	public static void Inserir(Turma t) { // C - Create
+		Abrir();
 		turmas.Add(t);
+		Salvar();
 	}
 	public static List<Turma> Listar() { // R - Read
+		Abrir();
 		return turmas;
 	}
+	public static Turma Listar(int id)
+  {
+    // Encontra, se existir, uma turma com o id
+    foreach (turma obj in turmas)
+      if (obj.Id == id) return obj;
+    return null;
+  }
 	public static void Atualizar(Turma t) { // U - Update
-		
+		Abrir();
+    Turma obj = Listar(t.Id);
+		if (obj != null) {
+			obj.Curso = t.Curso;
+    	obj.Descricao = t.Descricao;
+    	obj.AnoLetivo = t.AnoLetivo;
+		}
+    Salvar();
 	}
 	public static void Excluir(Turma t) { // D - Delete
-		
+		Abrir();
+  	turmas.Remove(Listar(t.Id));
+    Salvar();
 	}
 	public static void Abrir() {
-    XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
-    StreamReader f = new StreamReader("./turma.xml");
-    turmas = (List<Turma>) xml.Deserialize(f);
-    f.Close();
+    StreamReader f = null;
+		
+    try
+    {
+    	XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
+  		f = new StreamReader("./turma.xml");
+    	turmas = (List<Turma>)xml.Deserialize(f);
+    }
+    catch
+    {
+      turmas = new List<Turma>();
+    }
+      if (f != null) f.Close();
 	}
 	public static void Salvar() {
 		XmlSerializer xml = new XmlSerializer(typeof(List<Turma>));
